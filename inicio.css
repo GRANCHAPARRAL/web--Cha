@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem; /* Usar rem para un tamaño de fuente responsivo */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenido-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(imen/123.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto {
+    font-size: 5vw; /* Tamaño de fuente responsivo */
+}
+
+
+:root{
+--purple-dark: #170312;
+--purple-medium: #33032d;
+--purple-light: #531253;
+--gray-light: #eaeaea;
+--white: #f4fffd;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-size: 22px;
+}
+
+/*Es igual var permite declarar valores*/
+
+.contenido-header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imen/123.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenido-header .fondo{
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    background-image: url(imen/bg-top.png);
+}
+
+.contenido-header .texto{
+    width: calc(100vw - 20px);
+    height: 100vh;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: purple;
+   mix-blend-mode: multiply;
+}
+
+/*Abajo es el Menú*/
+.menu {
+    background-color: var(--purple-medium);
+    width: 100%;
+    position: sticky;     
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente el logo y los enlaces */
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+.menu .logo {
+    height: 50px; /* Ajusta la altura según sea necesario */
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+.menu a {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 26px;
+    background-color: var(--purple-medium);
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: var(--gray-light);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    transform: translateY(18px);
+    background-color: var(--purple-light);
+}
+
+/*Abajo es el sección de nosotros*/
+
+.nosotros{
+    margin-bottom: 60px;
+
+}
+.subtitulo{
+    font-size: 20px;
+    color: var(--purple-dark);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitulo samp{
+    background-color: var(--gray-light);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--purple-light);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+.nosotros .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.nosotros .enlace{
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--purple-light);
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease all;
+} 
+
+.nosotros .enlace:hover{
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--purple-light);
+
+}
+
+/*Abajo es el sección de Productos*/
+
+.productos {
+    background:  var(--gray-light);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.productos .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.productos .producto{
+    position: relative;
+    width: 100%;
+}
+
+.productos .overlay{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--purple-light);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.productos .producto:hover .overlay{
+    width: 100%;
+    opacity: .8;
+}
+
+.productos .producto .overlay-texto{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50%);
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.productos .btn-productos{
+    background-color: var(--purple-light);
+    color: #fff;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+    width: 25%;
+}
+ .productos .btn-productos:hover{
+    background-color: transparent;
+    border: 2px solid var(--purple-light);
+    color: var(--purple-light);
+ }
+
+ /*Creando la sección del Separador*/
+ .separador{
+    width: 100%;
+    height: 500px;
+    background-image: url(imen/foto2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+ }
+ .separador p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: "Noto Serif, serif";
+    padding: 10px;
+    color: rgb(105, 11, 193);
+ }
+
+ /*/*acerca de*/
+ .acerca-de{
+    margin-bottom: 60px;
+ }
+
+  /*/*Galeria*/
+
+  .galeria{
+    margin-bottom: 60px;
+  }
+  .galeria img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 5px;
+  }
+
+.contacto{
+    margin-bottom: 60px;
+}
+
+.redes-sociales{
+    padding: 10px;
+    background-color: var(--purple-light);
+}
+.redes-sociales img{
+    padding: 5px;
+    border-radius: 100%;
+    width: 50px;
+    transition: .3s ease all;
+}
+.redes-sociales img:hover{
+    transform: scale(1.5);
+}
+
+/*paralax*/
+
+.separador1{
+    width: 100%;
+    height: 500px;
+    background-image: url(salas/DSC_1366.JPG);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+ }
+ .separador2{
+    width: 100%;
+    height: 500px;
+    background-image: url(ariasverdes/LUMOS\ ESTUDIO-195.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+ }
+
+ /*foto de animales*/
+ .fotosimg{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color:  #531253;
+}
+/*gale*/
+.gale{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #9c1a9c;
+}
+/*foto de personal*/
+.foto {
+    width: 110%; /* O el tamaño deseado */
+    height: 500px; /* Ajusta la altura según necesites */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    display: flex; /* Para centrar la imagen */
+    justify-content: center;
+    align-items: center;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la calidad y recorta la imagen si es necesario */
+}
+
+
